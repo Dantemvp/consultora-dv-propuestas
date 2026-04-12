@@ -415,6 +415,20 @@ footer { background: #060606; padding: 26px 60px; display: flex; align-items: ce
   .section-lead { font-size: 0.85rem; }
   .diag-grid { grid-template-columns: 1fr; }
   .pilar-grid { grid-template-columns: 1fr; }
+
+  /* ── HERO EYEBROW: evitar huérfano "DV" ── */
+  .hero-eyebrow { font-size: 0.55rem; letter-spacing: 0.15em; }
+
+  /* ── TABLA MÉTRICAS MÓVIL ── */
+  section:has(.kpi-table) { overflow: visible; }
+  .kpi-table { min-width: 520px; }
+  .kpi-table th,
+  .kpi-table td { font-size: 0.6rem; padding: 10px 10px; }
+  /* Ocultar col "Por qué importa" — menos crítica en móvil */
+  .kpi-table th:nth-child(5),
+  .kpi-table td:nth-child(5) { display: none; }
+  .kpi-table th:nth-child(4),
+  .kpi-table td:nth-child(4) { min-width: 110px; }
 }
 
 @media (max-width: 390px) {
